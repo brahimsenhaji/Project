@@ -57,22 +57,6 @@ select {
   font: inherit;
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-   scroll-behavior: auto;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
 /*------------------------------------------------------------------------*/
 @import url('https://fonts.cdnfonts.com/css/roboto');
 
@@ -114,12 +98,37 @@ nav ul{
 nav a{
     color: var(--PrimaryColor) ;
 }
+nav a{
+  position: relative;
+}
+nav li{
+  overflow: hidden;
+}
+
 nav button{
+    position: relative;
     padding: 5px 10px;
     cursor: pointer;
     background-color: var(--PrimaryColor);
     color: var(--SecondColor);
     margin: 0 5px;
+    z-index: 0;
+    overflow: hidden;
+}
+nav button::after{
+  position: absolute;
+  content: '';
+  background-color: var(--SecondColor);
+  width: 0;
+  height: 100%;
+  right: 0%;
+  transition: all 0.4s ease-in-out;
+  top: 0%;
+}
+nav button:hover::after {
+  right: auto;
+  width: 100%;
+  left: 0;
 }
 /*--------------------------------------------------*/
 main{
@@ -131,7 +140,6 @@ main{
 .main-content{
   width: 90%;
   height: 80%;
-  
   overflow: hidden;
   background-image: url('./Images/img3.png');
   background-position: center;
@@ -159,7 +167,9 @@ main{
   background-color: transparent;
   background-color: var(--SecondColor);
 }
-
+.input::placeholder{
+  font-size: .8em;
+}
 .button--submit {
   width: 8em;
   height: 50px;
@@ -180,4 +190,3 @@ main{
   border-color: var(--PrimaryColor);
   outline: none;
 }
-
