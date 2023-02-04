@@ -125,19 +125,11 @@ nav button{
 /*--------------------------------------------------*/
 main{
     width: 100%;
-    height: 80vh;
-    position: relative;
+    height: 100vh;
     display: flex;
-    justify-content: center;
-}
-main img{
-    position: absolute;
-    width: 53vmax;
 }
 
-main form{
-    position: absolute;
-    background-color: #100F0F;
-}
+
+
 
 
