@@ -65,11 +65,15 @@ select {
 
    --PrimaryColor:#100F0F;
    --SecondColor:#E7E7E7;
+   --TherdColor:#ffff;
 }
 *{
     font-family: var(--Primaryfont);
     list-style: none;
     text-decoration: none;
+}
+::-webkit-scrollbar{
+  width: 0;
 }
 .Landing-Page{
   width: 100%;
@@ -291,3 +295,18 @@ main{
   border-color: var(--PrimaryColor);
   outline: none;
 }
+
+/*--------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+.houses{
+  width: 100%;
+  height: 100vh;
+  background-color: var(--TherdColor);
+}
+.houses h1{
+  width: 100%;
+  font-size: 4vmax;
+  text-align: center;
+  color: var(--PrimaryColor);
+}
+
