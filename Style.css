@@ -66,6 +66,7 @@ select {
    --PrimaryColor:#100F0F;
    --SecondColor:#E7E7E7;
    --TherdColor:#ffff;
+   --fourthColor :#609ca0;
 }
 *{
     font-family: var(--Primaryfont);
@@ -75,10 +76,29 @@ select {
 ::-webkit-scrollbar{
   width: 0;
 }
+
 .Landing-Page{
   width: 100%;
   height: 100vh;
   overflow: hidden;
+}
+.video1{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+@media (min-aspect-ratio: 16/9) {
+  .video1{
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video1{
+    width: auto;
+    height: 100%;
+  }
 }
 header{
     width: 100%;
@@ -92,6 +112,7 @@ header{
 }
 .logo{
   display: none;
+  cursor: pointer;
 }
 header img{
     width: 12vmax;
@@ -114,13 +135,14 @@ nav a{
 nav a{
   position: relative;
   overflow: hidden;
+  color: var(--SecondColor);
 }
 nav a::after{
   position: absolute;
   content: '';
   width: 0%;
   height: 15%;
-  background-color: var(--PrimaryColor);
+  background-color: var(--SecondColor);
   bottom: 0;
   right: 0%;
   transition: 0.3s;
@@ -133,15 +155,15 @@ nav button{
     position: relative;
     padding: .5em .6em;
     cursor: pointer;
-    background-color: var(--PrimaryColor);
-    color: var(--SecondColor);
+    background-color: var(--SecondColor);
+    color: var(--PrimaryColor);
     margin: 0 5px;
     transition: 0.3s;
     border: none;
 }
 nav button:hover{
-  color: var(--PrimaryColor);
-  background-color: var(--SecondColor);
+  color: var(--SecondColor);
+  background-color: var(--PrimaryColor);
 }
 .fa-bars{
   display: none;
@@ -233,10 +255,6 @@ main{
   width: 90%;
   height: 80%;
   overflow: hidden;
-  background-image: url('./Images/img3.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -298,15 +316,128 @@ main{
 
 /*--------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------*/
-.houses{
+.help-page{
   width: 100%;
   height: 100vh;
   background-color: var(--TherdColor);
 }
-.houses h1{
+.help-page h1{
   width: 100%;
   font-size: 4vmax;
   text-align: center;
   color: var(--PrimaryColor);
 }
+.container {
+    width: 100%;
+    height: max-content;
+    padding:  2% 10%;
+    color: var(--SecondColor);
+}
+/* utilities */
+.flex {
+    display: flex;
+    align-items: center;
+}
+.flex * {
+    margin-top: 0;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+/* general  */
+hgroup {
+    margin-left: 1em;
+}
+.testimonal-card {
+    background-color: var(--PrimaryColor);
+    color: var(--SecondColor);
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.testimonal-card h1{
+  color: var(--SecondColor);
+  font-size: 25px;
+}
+.testimonal-card p{
+ text-align: center;
+}
+.testimonal-card:first-child {
+    background-color: var(--PrimaryColor);
+    background-image: url("./Images/image5.jpg");
+    background-position: center;
+    background-size: cover;
+    color: var(--SecondColor);
+    /* style to control the postioning of this card */
+    grid-column: 1/3;
+}
+.testimonal-card:last-child{
+  grid-column:1/4;
+  background-image: url("./Images/image7.jpg");
+  background-position: center;
+    background-size: cover;
+}
+.testimonal-card:nth-child(2) {
+    background-color: var(--PrimaryColor);
+    background-image: url("./Images/image6.jpg");
+    background-position: center;
+    background-size: cover;
+    color: var(--SecondColor);
 
+}
+/* mobile veiw of max-width 375px == 23.4375em, 750 = 46.875em */
+@media (max-width: 23.4375em) {
+    .grid {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .grid>* {
+        margin-top: 20px;
+    }
+    .testimonal-card:first-child {
+        background-position: right 10px top 10px;
+    }
+}
+
+/*--------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+.Sell{
+  width: 100%;
+  height: fit-content;
+  background-color: var(--PrimaryColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;  
+  color: var(--SecondColor);
+}
+.Sell h1{
+  font-size: 30px;
+}
+.Sell button{
+  padding: 10px 20px;
+  background-color: var(--SecondColor);
+  color: var(--PrimaryColor);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.Sell button:hover{
+  background-color: var(--PrimaryColor);
+  color: var(--SecondColor);
+  border: 1px solid var(--SecondColor);
+}
+
+.About-Utopia{
+  width: 100%;
+  height: 100vh;
+  
+}
