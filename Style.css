@@ -37,10 +37,7 @@ body {
   line-height: 1.5;
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
+
 
 /* Make images easier to work with */
 img,
@@ -63,7 +60,7 @@ select {
 :root{
    --Primaryfont:'Roboto', sans-serif;
 
-   --PrimaryColor:#100F0F;
+   --PrimaryColor:#000000;
    --SecondColor:#E7E7E7;
    --TherdColor:#ffff;
    --fourthColor :#609ca0;
@@ -76,17 +73,21 @@ select {
 ::-webkit-scrollbar{
   width: 0;
 }
-
+body{
+  background-color: #000000;
+}
 .Landing-Page{
+  position: relative;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .video1{
   position: absolute;
+  width: 100%;
   right: 0;
   bottom: 0;
-  z-index: -1;
+  z-index: 2;
 }
 @media (min-aspect-ratio: 16/9) {
   .video1{
@@ -100,6 +101,7 @@ select {
     height: 100%;
   }
 }
+
 header{
     width: 100%;
     height: 10vh;
@@ -108,12 +110,15 @@ header{
     justify-content: space-between;
     padding: 0px 80px;
     padding-top: 30px;
-
+}
+.Logo{
+  z-index: 3;
 }
 .logo{
   display: none;
   cursor: pointer;
 }
+
 header img{
     width: 12vmax;
 }
@@ -122,6 +127,8 @@ nav{
     align-items: center;
     justify-content: space-between;
     width: 100vmax;
+    overflow-x: hidden;
+    z-index: 3;
 }
 nav ul{
     display: flex;
@@ -167,11 +174,12 @@ nav button:hover{
 }
 .fa-bars{
   display: none;
+  z-index: 3;
 }
 
 @media screen and (max-width:767px){
-  body{
-    overflow-x: hidden;
+  header{
+    overflow: hidden;
   }
   header img{
     width: 15vmax;
@@ -181,7 +189,7 @@ nav button:hover{
     display: block;
     left: 10%;
     font-size: 25px;
-    color: var(--PrimaryColor);
+    color: var(--SecondColor);
     cursor: pointer;
   }
   nav{
@@ -195,12 +203,13 @@ nav button:hover{
     opacity: 0;
     width: 0%;
     height: 90vh;
-    z-index: 200;
     padding: 0 10px;
     padding-top: 10px;
     padding-bottom: 100px;
     font-size: 18px;
     transition: 0.5s ;
+    overflow: hidden;
+    z-index: 4;
   }
   nav ul{
     display: flex;
@@ -249,6 +258,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
 }
 .main-content{
   position: relative;
@@ -260,15 +270,16 @@ main{
   align-items: center;
   justify-content: center;
   color: var(--SecondColor);
+  overflow-x: hidden;
 }
 .main-content h1{
   position: absolute;
   width: 100%;
   height: 100%;
   font-size: 10vmax;
-  z-index: 1;
   text-align: center;
   margin-top: 10px;
+  z-index: 3;
 }
 .input-group {
   width: 50.4%;
@@ -277,7 +288,7 @@ main{
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
+  z-index: 3;
 }
 
 .input {
@@ -318,20 +329,23 @@ main{
 /*-------------------------------------------------------------------------------*/
 .help-page{
   width: 100%;
-  height: 100vh;
-  background-color: var(--TherdColor);
+  height: fit-content;
+  background-color: var(--PrimaryColor);
+  overflow-x: hidden;
+  margin: 100px 0;
 }
-.help-page h1{
+.title{
   width: 100%;
   font-size: 4vmax;
   text-align: center;
-  color: var(--PrimaryColor);
+  color: var(--SecondColor);
 }
 .container {
     width: 100%;
     height: max-content;
     padding:  2% 10%;
-    color: var(--SecondColor);
+    color: var(--PrimaryColor);
+    overflow-x: hidden;
 }
 /* utilities */
 .flex {
@@ -351,6 +365,7 @@ hgroup {
     margin-left: 1em;
 }
 .testimonal-card {
+    position: relative;
     background-color: var(--PrimaryColor);
     color: var(--SecondColor);
     padding: 3em;
@@ -358,37 +373,38 @@ hgroup {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.video2, .video3, .video4{
+  position: absolute;
+  width: fit-content;
+  z-index: 1;
 }
 .testimonal-card h1{
-  color: var(--SecondColor);
+  color: var(--PrimaryColor);
   font-size: 25px;
 }
 .testimonal-card p{
  text-align: center;
+ z-index: 2;
 }
-.testimonal-card:first-child {
-    background-color: var(--PrimaryColor);
-    background-image: url("./Images/image5.jpg");
-    background-position: center;
-    background-size: cover;
-    color: var(--SecondColor);
+.testimonal-card:first-child {  
+     color: var(--PrimaryColor);
     /* style to control the postioning of this card */
     grid-column: 1/3;
+    
 }
 .testimonal-card:last-child{
   grid-column:1/4;
-  background-image: url("./Images/image7.jpg");
-  background-position: center;
-    background-size: cover;
+  color: var(--PrimaryColor);
 }
 .testimonal-card:nth-child(2) {
-    background-color: var(--PrimaryColor);
-    background-image: url("./Images/image6.jpg");
-    background-position: center;
-    background-size: cover;
-    color: var(--SecondColor);
-
+  color: var(--PrimaryColor);
 }
+
 /* mobile veiw of max-width 375px == 23.4375em, 750 = 46.875em */
 @media (max-width: 23.4375em) {
     .grid {
@@ -396,28 +412,42 @@ hgroup {
         flex-direction: column;
         padding: 20px;
     }
-    .grid>* {
+    .grid > * {
         margin-top: 20px;
     }
     .testimonal-card:first-child {
         background-position: right 10px top 10px;
     }
 }
+@media (max-width: 50.4375em) {
+  .grid {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+  }
+  .grid > * {
+      margin-top: 20px;
+  }
+  .testimonal-card:first-child {
+      background-position: right 10px top 10px;
+  }
+}
 
 /*--------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------*/
 
 .Sell{
+  position: relative;
   width: 100%;
   height: fit-content;
-  background-color: var(--PrimaryColor);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 15px;
-  padding: 20px;  
+  padding: 50px;
   color: var(--SecondColor);
+  margin: 100px 0;
 }
 .Sell h1{
   font-size: 30px;
@@ -430,14 +460,78 @@ hgroup {
   cursor: pointer;
   transition: 0.3s;
 }
+.Sell p{
+}
 .Sell button:hover{
   background-color: var(--PrimaryColor);
   color: var(--SecondColor);
   border: 1px solid var(--SecondColor);
 }
 
-.About-Utopia{
-  width: 100%;
-  height: 100vh;
-  
+.video5{
+  position: fixed;
+  left: 30%;
+  top: 10%;
+  width: 40%;
 }
+/*--------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+.About-Utopia{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: fit-content;
+  color: var(--SecondColor);
+  padding: 50px 0;
+  overflow: hidden;
+}
+.About-Utopia h1{
+  width: 100%;
+  font-size: 10vmax;
+  text-align: center;
+
+}
+.About-text{
+  padding: 0 10%;
+ 
+}
+
+/*-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------*/
+footer{
+  width: 100%;
+  height: 50vh;
+  background-color: var(--PrimaryColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+}
+
+.footer-content{
+  display: grid;
+  place-content: center;
+  width: 80%;
+  height: fit-content;
+  background-color: var(--SecondColor);
+  overflow: hidden;
+  padding-top: 50px;
+  z-index: 10;
+}
+.footer-content img{
+  width: 100%;
+}
+.footer-text{
+  width: 80%;
+  background-color: var(--SecondColor);
+  z-index: 10;
+}
+

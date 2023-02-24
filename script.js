@@ -6,3 +6,14 @@ menu.addEventListener('click',()=>{
     menu.classList.toggle('fa-xmark')
 })
 
+
+
+window.onscroll = ()=>{
+    let video5 = document.querySelector('.video5');
+    if(window.scrollY < 950){
+        video5.style.display = "none";
+    }
+    else{
+        video5.style.display ="block";
+    }
+}

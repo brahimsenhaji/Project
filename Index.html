@@ -10,12 +10,14 @@
     <title>Utopia</title>
 </head>
 <body>
-    <section class="Landing-Page">
-        <video autoplay loop muted plays-inline  class="video1">
+    <video src="./Videos/video5.mp4" type="video/mp4" autoplay loop muted plays-inline allow="autoplay" class="video5"></video>
+
+    <section class="Landing-Page">  
+        <video autoplay loop muted plays-inline  class="video1" allow="autoplay">
             <source src="./Videos/video1.mp4" type="video/mp4">
         </video>
         <header>
-            <a href="#"><img src="./Images/Logo3.png" alt="Logo"></a>
+            <a href="#" class="Logo"><img src="./Images/Logo3.png" alt="Logo"></a>
             <nav class="Slide">
                 <ul>
                     <div class="logo">
@@ -45,25 +47,35 @@
         </main>
     </section>
     <section class="help-page">
-        <h1>See how Utopia can help</h1>
-        
+        <div class="title">
+            See how Utopia can help
+        </div>
         <!---------------------------------------------------------------------------->
         <div class="container">
             <div class="testimonial grid">
                  <!-- First testimoinal card details -->
                 <div class="testimonal-card">
+                    <video autoplay loop muted plays-inline  class="video2" id="video-card" allow="autoplay">
+                        <source src="./Videos/video2.mp4" type="video/mp4">
+                    </video>
                    <h1>Increased Accessibility</h1>
                    <p>Providing a convenient platform for individuals to browse and search for properties from anywhere with an internet connection, making it easier to find and compare properties.</p>
                 </div>
     
                 <!-- Second testimoinal card details -->
                 <div class="testimonal-card">
+                    <video autoplay loop muted plays-inline class="video3" id="video-card" allow="autoplay">
+                        <source src="./Videos/video3.mp4" type="video/mp4">
+                    </video>
                     <h1>Streamlined Process</h1>
                    <p>Simplify the process of buying, selling, or renting a property by enabling users to communicate with sellers or landlords, view property listings, and even complete transactions online.</p>
                 </div>
     
                 <!-- thered testimoinal card details -->
                 <div class="testimonal-card">
+                    <video autoplay loop muted plays-inline  class="video4" id="video-card" allow="autoplay">
+                        <source src="./Videos/video4.mp4" type="video/mp4">
+                    </video>
                     <h1>Wider Exposure</h1>
                    <p>Provide a larger audience for property listings, making it easier for sellers and landlords to find interested buyers and tenants, and increasing the chances of finding a successful match.</p>
                 </div>
@@ -76,9 +88,44 @@
          <h1>SELL YOUR PROPERTY THROUGH Utopia</h1>
          <button>SELL NOW</button>
     </section>
+    <!--------------------------------------------------------------------------------------------------------->
+  
+    
+    <!--------------------------------------------------------------------------------------------------------->
     <section class="About-Utopia">
-        
+       
+        <h1>About Utopia</h1>
+        <div class="About-text">
+            <p>
+                Utopia is a website dedicated to helping people buy, sell, and rent homes. Whether you are a first-time homebuyer or a seasoned real estate investor, Utopia is your one-stop-shop for all your real estate needs. <br><br>
+
+                Utopia has a user-friendly interface that makes it easy to search for properties. You can filter your search by location, price range, property type, and more. The website has a vast database of properties, including single-family homes, townhouses, condos, apartments, and commercial properties. <br><br>
+                
+                Sellers can list their properties on Utopia for a small fee, and buyers can contact them directly through the website. Utopia provides tools to help sellers market their properties effectively, such as professional photography, virtual tours, and detailed property descriptions. <br><br>
+                
+                In addition to buying and selling homes, Utopia also allows users to rent properties. Whether you need a temporary rental or a long-term lease, you can find what you're looking for on Utopia. Renters can search for properties by location, price range, and property type. They can also contact landlords directly through the website.
+            </p>
+           
+        </div>
     </section>
+
+    <footer>
+        <div class="footer-content">
+            <img src="./Images/Logo1.png" alt="">
+        </div>
+        <div class="footer-text">
+            <ul>
+                <li>Home</li>
+                <li>Sell</li>
+                <li>Buy</li>
+                <li>Rent</li>
+                <li>About</li>
+                <li>contact</li>
+            </ul>
+
+
+        </div>
+    </footer>
     <script src="./script.js"></script>
 </body>
 </html>
