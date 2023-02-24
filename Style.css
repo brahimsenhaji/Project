@@ -387,6 +387,7 @@ hgroup {
 .testimonal-card h1{
   color: var(--PrimaryColor);
   font-size: 25px;
+  z-index: 2;
 }
 .testimonal-card p{
  text-align: center;
@@ -461,8 +462,7 @@ hgroup {
   cursor: pointer;
   transition: 0.3s;
 }
-.Sell p{
-}
+
 .Sell button:hover{
   background-color: var(--PrimaryColor);
   color: var(--SecondColor);
