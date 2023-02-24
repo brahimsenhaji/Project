@@ -336,9 +336,10 @@ main{
 }
 .title{
   width: 100%;
-  font-size: 4vmax;
+  font-size: 5vmax;
   text-align: center;
   color: var(--SecondColor);
+
 }
 .container {
     width: 100%;
