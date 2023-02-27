@@ -9,6 +9,11 @@ menu.addEventListener('click',()=>{
 
 
 window.onscroll = ()=>{
+    let container = document.querySelector('.container');
+    if(window.scrollY >= 413){
+        container.classList.add('active2');
+    }
+    //adding the bubble stye
     let video5 = document.querySelector('.video5');
     if(window.scrollY < 950){
         video5.style.display = "none";
@@ -16,4 +21,17 @@ window.onscroll = ()=>{
     else{
         video5.style.display ="block";
     }
+
 }
+
+let title = document.querySelector('.title');
+const Helpabserver1 = new IntersectionObserver((entries)=>{
+    entries.forEach(entry =>{
+        if(entry.isIntersecting){
+            title.classList.add('active1');
+        }
+    })
+});
+
+Helpabserver1.observe(title);
+

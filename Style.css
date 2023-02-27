@@ -339,14 +339,26 @@ main{
   font-size: 5vmax;
   text-align: center;
   color: var(--SecondColor);
-
+  padding:  0 20px;
+  opacity: 0;
+  transition: 4s;
+}
+.active1{
+  opacity: 1;
 }
 .container {
+  position: relative;
     width: 100%;
     height: max-content;
     padding:  2% 10%;
     color: var(--PrimaryColor);
-    overflow-x: hidden;
+    overflow: hidden;
+    opacity: 0;
+    transition: 5s;
+}
+
+.active2{
+  opacity: 1;
 }
 /* utilities */
 .flex {
@@ -397,7 +409,7 @@ hgroup {
      color: var(--PrimaryColor);
     /* style to control the postioning of this card */
     grid-column: 1/3;
-    
+  
 }
 .testimonal-card:last-child{
   grid-column:1/4;
@@ -464,7 +476,7 @@ hgroup {
 }
 
 .Sell button:hover{
-  background-color: var(--PrimaryColor);
+  background-color:transparent;
   color: var(--SecondColor);
   border: 1px solid var(--SecondColor);
 }
