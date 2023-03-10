@@ -379,7 +379,7 @@ hgroup {
 }
 .testimonal-card {
     position: relative;
-    background-color: var(--PrimaryColor);
+    background-color: var(--SecondColor);
     color: var(--SecondColor);
     padding: 3em;
     display: flex;
