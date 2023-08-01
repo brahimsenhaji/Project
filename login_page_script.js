@@ -20,3 +20,6 @@ toggle_btn.forEach((btn) => {
   });
 });
 
+if(window.location.href == "hhttp://localhost/Utopia-Website/sign-in-up_page/sign_Index.php?Sign_up"){
+  main.classList.add("sign-up-mode");
+}
